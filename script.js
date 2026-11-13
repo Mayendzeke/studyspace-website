@@ -50,3 +50,15 @@
     }, {passive:true});
   });
 })();
+  const contactForm = document.getElementById("contactForm");
+  contactForm?.addEventListener("submit", event => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+    const data = new FormData(contactForm);
+    const subject = encodeURIComponent("Study Space website enquiry — " + data.get("role"));
+    const body = encodeURIComponent(
+      "Name: " + data.get("name") + "\nEmail: " + data.get("email") +
+      "\nRole: " + data.get("role") + "\n\n" + data.get("message")
+    );
+    window.location.href = "mailto:ayandaagustozwane@gmail.com?subject=" + subject + "&body=" + body;
+  });
