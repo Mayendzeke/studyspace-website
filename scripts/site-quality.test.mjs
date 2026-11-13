@@ -4,11 +4,14 @@ import { readFileSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
 const css = readFileSync("styles.css", "utf8");
+const terms = readFileSync("terms.html", "utf8");
 
 test("public website consistently advertises a seven-day free trial", () => {
   assert.match(html, /7 days[\s\S]{0,80}Free trial for new/);
   assert.match(html, /7-day free trial/);
   assert.doesNotMatch(html, /48[- ]?(?:hour|hrs?)/i);
+  assert.match(terms, /7-day free trial/);
+  assert.doesNotMatch(terms, /48-hour free trial/i);
 });
 
 test("public website keeps the established weekly, fortnightly and monthly prices", () => {
