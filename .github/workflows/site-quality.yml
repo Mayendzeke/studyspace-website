@@ -1,0 +1,27 @@
+name: Study Space website quality checks
+
+on:
+  pull_request:
+    paths:
+      - "index.html"
+      - "styles.css"
+      - "scripts/site-quality.test.mjs"
+      - ".github/workflows/site-quality.yml"
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Verify public website copy and typography
+        run: node --test scripts/site-quality.test.mjs
