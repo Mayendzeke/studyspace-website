@@ -68,3 +68,9 @@
 .contact-email-note{font-size:10px!important}
 @media(max-width:760px){.mia-guide-grid,.pricing-grid{grid-template-columns:1fr}.mia-chat{max-width:none}.mia-boundaries{align-items:flex-start;flex-direction:column}.price-card{min-height:250px}.contact-card{grid-template-columns:1fr}}
 @media(prefers-contrast:more){.contact-form input,.contact-form select,.contact-form textarea{border-color:#5140a6}.mia-chat,.price-card,.contact-form{border-color:#7663bc}}
+
+/* Keyboard focus and contrast support */
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #4f3ba9;outline-offset:3px;border-radius:8px}
+.welcome-siswati{display:block;color:#6553a7;font-weight:800;font-size:12px;letter-spacing:.1px;margin-bottom:8px}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.mockup-note{display:block;font-size:9px;color:#938ba3;margin-top:10px}
