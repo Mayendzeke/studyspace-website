@@ -23,3 +23,48 @@
 .stories-note{text-align:center;font-size:10px;color:#8e879f;line-height:1.7;margin:22px auto 0;max-width:600px}
 @media(max-width:760px){.stories-grid{grid-template-columns:1fr}.testimonial-card,.review-invite{padding:25px}}
 @media(max-width:420px){.stat-strip{flex-wrap:wrap;justify-content:flex-start;gap:15px}.stat-strip div{flex:1 1 38%;min-width:0}.stat-strip>i{display:none}.stat-strip span{font-size:8px}}
+
+/* Locally hosted Study Space illustrations and conversion sections */
+.hero-photo-frame,.audience-image,.teacher-image{background:linear-gradient(145deg,#e9e3ff,#dff4f1)}
+.hero-photo{object-fit:cover}
+.mia-guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.mia-chat{border-radius:25px;padding:22px;max-width:560px}
+.mia-chat-head{display:flex;align-items:center;gap:11px;padding-bottom:15px;border-bottom:1px solid var(--line)}
+.mia-chat-icon{width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,#9a86ed,#5b48c5);color:white;display:grid;place-items:center;font:800 17px Manrope}
+.mia-chat-head b,.mia-chat-head small{display:block}.mia-chat-head b{font-size:12px}.mia-chat-head small{font-size:9px;color:#9189a3;margin-top:4px}.mia-online{width:8px;height:8px;border-radius:50%;background:#58b99a;margin-left:auto}
+.mia-bubble{max-width:88%;padding:13px 15px;border-radius:15px;margin-top:14px;font-size:11px;line-height:1.7;color:#51496a}
+.mia-bubble small{display:block;font-size:8px;letter-spacing:1px;font-weight:800;color:#9289a6;margin-bottom:5px}
+.student-bubble{margin-left:auto;background:#eee9ff;border-bottom-right-radius:5px}
+.mia-bubble-ai{background:rgba(255,255,255,.8);border:1px solid rgba(120,99,205,.1);border-bottom-left-radius:5px}
+.mia-chat-foot{font-size:9px;color:#9890a6;text-align:center;margin-top:18px}
+.mia-guide-copy h3{font-size:24px;line-height:1.25;margin:12px 0}
+.safety-mini{padding:17px;border-radius:17px;background:rgba(235,248,245,.78);border:1px solid rgba(99,183,164,.18);margin:20px 0}
+.safety-mini b{font-size:11px;color:#387e73}.safety-mini p{font-size:10px;color:#688a84;line-height:1.7;margin:6px 0 0}
+.mia-boundaries{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;padding:18px 22px;border-radius:18px;margin-top:24px}
+.mia-boundaries b{font-size:10px;color:#544879;margin-right:auto}.mia-boundaries span{font-size:9px;color:#80788e}
+.curriculum-note{padding:14px 16px;background:rgba(255,255,255,.56);border:1px solid var(--line);border-radius:15px;margin:18px 0}
+.curriculum-note b{font-size:10px}.curriculum-note p{font-size:10px;line-height:1.7;color:#80788e;margin:5px 0 0}
+.teacher-actions{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.price-card{padding:28px;border-radius:24px;display:flex;flex-direction:column;align-items:flex-start;min-height:285px}
+.price-featured{border-color:rgba(125,102,218,.45);box-shadow:0 20px 55px rgba(93,69,196,.16);background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(238,233,255,.82))}
+.price-period{font-size:9px;font-weight:800;letter-spacing:1.7px;color:#8775d2}
+.price-card h3{font-size:20px;margin:12px 0}
+.price-amount{display:flex;align-items:baseline;gap:9px;margin-bottom:12px}
+.price-amount strong{font:800 38px Manrope;letter-spacing:-1.5px;color:#5e49bd}
+.price-amount small{font-size:10px;color:#928aa4}
+.price-card p{font-size:11px;color:#817991;line-height:1.7;min-height:38px}
+.price-card .button{margin-top:auto;font-size:10px;padding:12px 15px}
+.payment-note{display:flex;align-items:flex-start;gap:14px;padding:19px 22px;border-radius:18px;margin-top:20px}
+.payment-icon{width:36px;height:36px;flex:0 0 36px;border-radius:12px;background:#e7f6f1;color:#3e9c82;display:grid;place-items:center;font-weight:900}
+.payment-note b{font-size:11px}.payment-note p{font-size:10px;color:#80788e;line-height:1.7;margin:5px 0 0}
+.pricing-footnote{font-size:9px;color:#9890a5;line-height:1.7;margin-top:13px}
+.contact-card{grid-template-columns:1fr .95fr}
+.contact-form{padding:24px;border-radius:22px;display:flex;flex-direction:column;gap:9px}
+.contact-form h3{font-size:19px;margin:0}.contact-form p,.contact-form>small{font-size:9px;color:#8b849b;line-height:1.6;margin:0 0 5px}
+.contact-form label{font-size:10px;font-weight:800;color:#625a79;margin-top:5px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:12px 13px;border:1px solid rgba(110,88,190,.18);border-radius:11px;background:rgba(255,255,255,.78);color:#312a49;font:12px "DM Sans",sans-serif;outline-offset:2px}
+.contact-form textarea{resize:vertical}.contact-form button{align-self:flex-start;margin-top:7px}
+.contact-email-note{font-size:10px!important}
+@media(max-width:760px){.mia-guide-grid,.pricing-grid{grid-template-columns:1fr}.mia-chat{max-width:none}.mia-boundaries{align-items:flex-start;flex-direction:column}.price-card{min-height:250px}.contact-card{grid-template-columns:1fr}}
+@media(prefers-contrast:more){.contact-form input,.contact-form select,.contact-form textarea{border-color:#5140a6}.mia-chat,.price-card,.contact-form{border-color:#7663bc}}
