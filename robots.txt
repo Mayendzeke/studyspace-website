@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mayendzeke.github.io/studyspace-website/sitemap.xml
