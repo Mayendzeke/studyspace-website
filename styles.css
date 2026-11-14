@@ -145,3 +145,6 @@ button,a{touch-action:manipulation}
   .feature-card,.price-card,.testimonial-card,.review-invite{transition:none;transform:none!important}
   #connectionStatus,#connectionStatus.is-visible{animation:none;transition:none}
 }
+
+/* Keep the public-site wordmark identical to the Student and Monitor navigation. */
+.brand-copy b span{color:var(--purple)}
