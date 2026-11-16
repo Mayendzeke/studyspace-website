@@ -180,3 +180,19 @@ button,a{touch-action:manipulation}
 @media(max-width:1000px){.pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{gap:24px}.hero h1{font-size:clamp(54px,7vw,78px)}}
 @media(max-width:760px){.hero{min-height:0;grid-template-columns:1fr;padding-top:54px;padding-bottom:80px}.hero-copy{max-width:100%}.hero h1{font-size:clamp(49px,12vw,72px);letter-spacing:-2.8px}.hero-photo-frame{width:min(420px,86%);height:430px}.pathways{padding-top:18px}.pathway-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.audience-image,.audience-image img,.teacher-image,.teacher-image img{min-height:310px}.audience-image{height:310px}.teacher-image{height:330px}}
 @media(max-width:420px){.pathway-card{min-height:145px;padding:15px 13px}.pathway-card h3{font-size:15px}.pathway-card p{font-size:9px}.pathway-grid{gap:9px}.hero-photo-frame{height:365px}.hero-visual{height:400px}}
+
+
+/* Editorial photography gallery: real learning moments, responsive and accessible. */
+.learning-gallery{padding-top:clamp(56px,8vw,100px)}
+.photo-story-grid{display:grid;grid-template-columns:1.35fr 1fr;grid-template-rows:repeat(2,minmax(190px,245px));gap:16px;margin-top:34px}
+.photo-story{position:relative;isolation:isolate;overflow:hidden;min-width:0;border-radius:26px;background:#30264e;box-shadow:0 18px 48px rgba(45,31,96,.12)}
+.photo-story-large{grid-row:span 2}
+.photo-story img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.2,.7,.2,1);}
+.photo-story:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(18,14,37,0) 30%,rgba(18,14,37,.76) 100%)}
+.photo-story-overlay{position:absolute;z-index:1;left:clamp(18px,3vw,30px);right:20px;bottom:clamp(18px,3vw,28px);color:#fff}
+.photo-story-overlay span{display:inline-block;font-size:9px;font-weight:900;letter-spacing:1.5px;color:#e4dcff;margin-bottom:9px}
+.photo-story-overlay h3{max-width:470px;margin:0;font:800 clamp(17px,2.1vw,25px)/1.2 "DM Sans",system-ui,sans-serif;letter-spacing:-.6px;color:#fff}
+.photo-story-large .photo-story-overlay h3{font-size:clamp(24px,3.2vw,38px);max-width:440px}
+@media(hover:hover) and (pointer:fine){.photo-story:hover img{transform:scale(1.045)}}
+@media(max-width:760px){.photo-story-grid{grid-template-columns:1fr;grid-template-rows:280px 220px 220px;gap:12px;margin-top:24px}.photo-story-large{grid-row:auto}.photo-story{border-radius:21px}}
+@media(prefers-reduced-motion:reduce){.photo-story img{transition:none}}
