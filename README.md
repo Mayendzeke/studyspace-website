@@ -23,6 +23,6 @@ This is a lightweight static site. Open `index.html` in a browser or serve the r
 
 Responsive mobile-first layout, Study Space graduation-cap identity, animated welcome splash, glass surfaces, subtle pointer and scroll effects, reduced-motion and reduced-transparency fallbacks, semantic sections, keyboard-accessible native FAQ disclosures, metadata, sitemap and robots file.
 
-## Image credits
+## Photography
 
-Hero/student: PikWizard. Parent/learner: The Open Letter. Teacher: Injini. External image URLs are used in the page; check each source's current terms before commercial use or redistribution.
+The homepage and audience sections use responsive photographic imagery from Unsplash. Images are loaded from Unsplash with width and quality parameters; review the applicable Unsplash licence and image-specific terms before reusing assets outside this website.
