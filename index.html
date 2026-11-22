@@ -37,7 +37,22 @@
 <body>
   <div class="splash" id="splash" aria-label="Welcome to Study Space">
     <div class="splash-orbit"></div>
-    <div class="brand-mark splash-mark" aria-hidden="true"><img src="./favicon.svg" alt=""></div>
+    <div class="brand-mark splash-mark" aria-hidden="true">
+      <svg class="studyspace-splash-logo" viewBox="0 0 512 512" aria-hidden="true">
+        <defs>
+          <linearGradient id="studyspace-splash-purple" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#927df5"/>
+            <stop offset="1" stop-color="#5d45c8"/>
+          </linearGradient>
+        </defs>
+        <rect class="studyspace-logo-colour" x="0" y="0" width="512" height="512" rx="112" fill="url(#studyspace-splash-purple)"/>
+        <g class="studyspace-logo-sketch" fill="none" stroke="#fff" stroke-width="23" stroke-linecap="round" stroke-linejoin="round">
+          <path class="studyspace-logo-cap-top" pathLength="1000" d="M112 215 256 143 400 215 256 288 112 215Z"/>
+          <path class="studyspace-logo-cap-base" pathLength="1000" d="M164 246v76c0 17 41 42 92 42s92-25 92-42v-76"/>
+          <path class="studyspace-logo-cap-tassel" pathLength="1000" d="M400 215v112"/>
+        </g>
+      </svg>
+    </div>
     <strong>Study Space</strong><span>Make room for your potential.</span>
     <div class="splash-loader"><i></i></div>
   </div>

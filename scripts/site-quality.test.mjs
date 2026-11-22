@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
 const css = readFileSync("styles.css", "utf8");
+const script = readFileSync("script.js", "utf8");
 const terms = readFileSync("terms.html", "utf8");
 
 test("website consistently describes the seven-day trial", () => {
@@ -43,4 +44,24 @@ test("responsive pathway styling and reduced motion remain available", () => {
   assert.match(css, /\.pathway-grid/);
   assert.match(css, /@media\s*\(max-width:\s*760px\)/);
   assert.match(css, /prefers-reduced-motion/);
+});
+
+
+test("website splash uses the existing pencil-drawn logo and no water-fill animation", () => {
+  assert.match(html, /class="studyspace-splash-logo"/);
+  assert.match(html, /studyspace-logo-cap-top/);
+  assert.match(css, /@keyframes studyspace-cap-draw/);
+  assert.doesNotMatch(css, /water-fill|water-filling/i);
+});
+
+test("website moves the splash logo into the persistent header", () => {
+  assert.match(css, /\.splash-mark \.studyspace-splash-logo/);
+  assert.match(css, /body\.splash-dismissed \.site-header \.brand-mark img/);
+  assert.match(script, /startViewTransition/);
+  assert.match(script, /3200/);
+});
+
+test("website logo animation respects reduced-motion preferences", () => {
+  assert.match(script, /prefers-reduced-motion/);
+  assert.match(css, /prefers-reduced-motion:\s*reduce/);
 });
