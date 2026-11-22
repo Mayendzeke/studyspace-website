@@ -1,7 +1,21 @@
 (() => {
   const splash = document.getElementById("splash");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const hideSplash = () => window.setTimeout(() => splash?.classList.add("hide"), reducedMotion ? 80 : 1250);
+  const hideSplash = () => window.setTimeout(() => {
+    const finishSplash = () => {
+      splash?.classList.add("hide");
+      document.body.classList.add("splash-dismissed");
+    };
+    if (!splash || reducedMotion || typeof document.startViewTransition !== "function") {
+      finishSplash();
+      return;
+    }
+    try {
+      document.startViewTransition(finishSplash);
+    } catch {
+      finishSplash();
+    }
+  }, reducedMotion ? 80 : 3200);
   if (sessionStorage.getItem("studyspace-welcomed")) hideSplash();
   else { hideSplash(); sessionStorage.setItem("studyspace-welcomed", "1"); }
 
