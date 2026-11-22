@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 
 const html = readFileSync("index.html", "utf8");
 const css = readFileSync("styles.css", "utf8");
+const script = readFileSync("script.js", "utf8");
 const terms = readFileSync("terms.html", "utf8");
 
 test("website consistently describes the seven-day trial", () => {
