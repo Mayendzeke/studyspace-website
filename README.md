@@ -26,3 +26,8 @@ Responsive mobile-first layout, Study Space graduation-cap identity, animated we
 ## Photography
 
 The homepage and audience sections use responsive photographic imagery from Unsplash. Images are loaded with width and quality parameters; check the applicable Unsplash licence and image-specific terms before reusing them outside this website.
+
+
+## Development standard
+
+All changes must follow [STUDYSPACE_DEVELOPMENT_STANDARD.md](STUDYSPACE_DEVELOPMENT_STANDARD.md). The pull-request template includes the required visual consistency, accessibility and verification checklist.
