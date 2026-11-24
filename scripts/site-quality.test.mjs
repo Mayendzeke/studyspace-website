@@ -9,8 +9,8 @@ const terms = readFileSync("terms.html", "utf8");
 
 test("website consistently describes the 48-hour trial", () => {
   assert.match(html, /48-hour free trial|48 hours of free access/i);
-  assert.match(terms, /7-day free trial|7 days of free access/i);
-  assert.doesNotMatch(html + terms, /48[- ]?(?:hour|hrs?)/i);
+  assert.match(terms, /48-hour free trial|48 hours of free access/i);
+  assert.doesNotMatch(html + terms, /7-day free trial|7 days of free access/i);
 });
 
 test("website explains all five education pathways", () => {
