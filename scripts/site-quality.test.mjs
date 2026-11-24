@@ -11,9 +11,9 @@ test("website consistently describes the 48-hour trial without changing paid pla
   assert.match(html, /48-hour free trial|48 hours.*free trial/i);
   assert.match(terms, /48 consecutive hours of free access/i);
   assert.doesNotMatch(html + terms, /7-day free trial|free trial lasts 7 days|receive 7 days of free access/i);
-  assert.match(html, /Weekly[\\s\\S]*E100[\\s\\S]*7 days/);
-  assert.match(html, /Two weeks[\\s\\S]*E180[\\s\\S]*14 days/);
-  assert.match(html, /Monthly[\\s\\S]*E350[\\s\\S]*28 days/);
+  assert.match(html, /Weekly[\s\S]*E100[\s\S]*7 days/);
+  assert.match(html, /Two weeks[\s\S]*E180[\s\S]*14 days/);
+  assert.match(html, /Monthly[\s\S]*E350[\s\S]*28 days/);
 });
 
 test("website explains all five education pathways", () => {
