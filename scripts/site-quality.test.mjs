@@ -7,8 +7,8 @@ const css = readFileSync("styles.css", "utf8");
 const script = readFileSync("script.js", "utf8");
 const terms = readFileSync("terms.html", "utf8");
 
-test("website consistently describes the seven-day trial", () => {
-  assert.match(html, /7-day free trial|7 days of free access/i);
+test("website consistently describes the 48-hour trial", () => {
+  assert.match(html, /48-hour free trial|48 hours of free access/i);
   assert.match(terms, /7-day free trial|7 days of free access/i);
   assert.doesNotMatch(html + terms, /48[- ]?(?:hour|hrs?)/i);
 });
