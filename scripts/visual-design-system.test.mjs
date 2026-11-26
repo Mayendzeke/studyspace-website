@@ -4,6 +4,11 @@ import { readFileSync } from "node:fs";
 
 const css = readFileSync(new URL("../styles.css", import.meta.url), "utf8");
 
+test("public website defines a syntactically valid display-font token", () => {
+  assert.match(css, /--font-display:\s*'DM Sans',sans-serif/);
+  assert.doesNotMatch(css, /--font-display:\s*''/);
+});
+
 test("public website uses a premium glass surface system", () => {
   assert.match(css, /Study Space premium glass interactions/);
   assert.match(css, /--glass-depth/);
