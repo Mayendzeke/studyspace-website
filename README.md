@@ -8,10 +8,14 @@ This is a lightweight static site. Open `index.html` in a browser or serve the r
 
 ## Publish with GitHub Pages
 
-1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch **main** and folder **/(root)**, then Save.
-4. Wait for GitHub Pages to publish the site at https://mayendzeke.github.io/studyspace-website/.
+The website now publishes automatically through the repository-owned GitHub Actions workflow:
+
+- Workflow: `.github/workflows/deploy.yml`
+- Every push to `main` runs the static website quality checks, assembles the public HTML/CSS/JS and legal pages, and deploys the artifact to GitHub Pages.
+- Pull requests run validation but do not publish.
+- A manual deployment can be started from **Actions → Deploy Study Space public website → Run workflow**.
+
+The deployment must complete successfully before a change is treated as live. The public URL is https://mayendzeke.github.io/studyspace-website/.
 
 ## Key destinations
 
